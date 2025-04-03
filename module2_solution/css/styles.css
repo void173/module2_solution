@@ -1,0 +1,81 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+    border: 1px solid black;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+p {
+    margin-top: 40px; /* Ensure text doesn't overlap the title */
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        width: 32%; /* 3 equal sections */
+        float: left;
+        margin-right: 2%;
+    }
+
+    .section:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .section {
+        width: 48%; /* Two sections per row */
+        float: left;
+        margin-right: 2%;
+    }
+
+    .section:last-child {
+        width: 100%; /* Third section takes up the entire row */
+        margin-right: 0;
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes the entire width */
+        margin-bottom: 20px;
+    }
+}
